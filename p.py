@@ -35,9 +35,8 @@ elif select == 3:
 elif select == 4:
     result = div(a, b)
     operation = '/'
-
-
-if (result != 0) & (operation != 0):
+    
+if result is not None and operation is not None:
     cursor = con.cursor()
     sql = "INSERT INTO datas (operand_1, operation, operand_2, result) VALUES (%s, %s, %s, %s)"
     values = (a, operation, b, result)
